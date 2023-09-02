@@ -1,0 +1,86 @@
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+h4 {
+  font-size: 1.4rem;
+}
+@media (max-width: 768px) {
+  body {
+    padding-top: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    padding-top: 2.5rem;
+  }
+}
+h1 {
+  margin-bottom: 0.7rem;
+}
+
+.container {
+  max-width: 960px;
+}
+
+.card-deck .card {
+  min-width: 220px;
+}
+
+.intro {
+max-width: 960px;
+}
+
+.intro-text {
+max-width: 500px;
+}
+
+.image-text {
+  color: gray;
+  font-size: 12px;
+}
+
+a {
+  color: #00398e;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.achievement {
+	color: #8100ea;
+  font-size: 1rem;
+}
+
+.paper {
+	max-width: 640px;
+}
+
+i.far {
+  font-size: 1.5rem;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+i.ai {
+  font-size: 1.5rem;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+i.fab {
+  font-size: 1.5rem;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+@media (min-width: 768px) {
+  .teaser {
+    max-width: 266px;
+  }
+}
