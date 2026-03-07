@@ -395,6 +395,15 @@ a {
   aspect-ratio: 5 / 2;
 }
 
+.gallery-caption {
+  margin: 32px 0 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-style: italic;
+  letter-spacing: 0.04em;
+  opacity: 0.75;
+}
+
 .gallery-carousel .slide {
   background-size: cover;
   background-color: #0a0e1a;
