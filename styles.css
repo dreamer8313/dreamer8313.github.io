@@ -146,7 +146,7 @@ a {
   gap: 14px;
   justify-content: center;
   align-self: start;
-  margin-top: 18px;
+  margin-top: 8px;
 }
 
 .hero-text {
@@ -172,12 +172,20 @@ a {
 }
 
 .profile-like-wrap {
-  width: 200px;
+  width: auto;
   display: flex;
 }
 
 .profile-like-wrap .like-button {
-  width: 100%;
+  width: auto;
+}
+
+.hero-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 .hero-cta {
@@ -1392,13 +1400,17 @@ a {
     margin-top: 0;
   }
 
+  .hero-heading-row {
+    justify-content: flex-start;
+  }
+
   .profile-photo {
     width: 170px;
     height: 224px;
   }
 
   .profile-like-wrap {
-    width: 170px;
+    width: auto;
   }
 
   .section {

@@ -1,3 +1,13 @@
+const FIREBASE_CONFIG = {
+  apiKey: "AIzaSyDpg1HKmiXSGJSJNc8cFVI2pKPLV7Zb-wY",
+  authDomain: "lshenaeworld.firebaseapp.com",
+  projectId: "lshenaeworld",
+  storageBucket: "lshenaeworld.firebasestorage.app",
+  messagingSenderId: "328570894168",
+  appId: "1:328570894168:web:8775b1f8cd7f91951ad72d",
+  measurementId: "G-5K2YDL9PFC"
+};
+
 function initCarousel(container) {
   const track = container.querySelector('.carousel-track');
   const slides = Array.from(container.querySelectorAll('.slide'));
@@ -112,16 +122,10 @@ const likeButton = document.getElementById('like-button');
 const likeCount = document.getElementById('like-count');
 
 if (likeButton && likeCount) {
-  const LIKE_COUNT_KEY = 'homepage-like-count';
   const LIKE_ACTIVE_KEY = 'homepage-like-active';
-
-  const readNumber = (key, fallback = 0) => {
-    const value = Number(localStorage.getItem(key));
-    return Number.isFinite(value) ? value : fallback;
-  };
-
-  let count = readNumber(LIKE_COUNT_KEY, 0);
   let liked = localStorage.getItem(LIKE_ACTIVE_KEY) === 'true';
+  let count = 0;
+  let isSubmitting = false;
 
   function renderLikeState() {
     likeCount.textContent = String(count);
@@ -132,19 +136,64 @@ if (likeButton && likeCount) {
     if (textEl) textEl.textContent = label;
   }
 
-  likeButton.addEventListener('click', () => {
-    if (liked) {
-      liked = false;
-      count = Math.max(0, count - 1);
-    } else {
-      liked = true;
-      count += 1;
-    }
-
-    localStorage.setItem(LIKE_COUNT_KEY, String(count));
-    localStorage.setItem(LIKE_ACTIVE_KEY, liked ? 'true' : 'false');
-    renderLikeState();
-  });
-
   renderLikeState();
+
+  (async () => {
+    try {
+      const [{ initializeApp }, { getAnalytics, isSupported }, firestore] = await Promise.all([
+        import('https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js'),
+        import('https://www.gstatic.com/firebasejs/11.6.1/firebase-analytics.js'),
+        import('https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js')
+      ]);
+
+      const app = initializeApp(FIREBASE_CONFIG);
+
+      try {
+        if (await isSupported()) {
+          getAnalytics(app);
+        }
+      } catch (analyticsError) {
+        console.warn('Firebase analytics init skipped:', analyticsError);
+      }
+
+      const { getFirestore, doc, onSnapshot, runTransaction } = firestore;
+      const db = getFirestore(app);
+      const likeRef = doc(db, 'siteStats', 'homepage');
+
+      onSnapshot(likeRef, snapshot => {
+        count = snapshot.exists() ? Number(snapshot.data().likes || 0) : 0;
+        renderLikeState();
+      }, error => {
+        console.error('读取点赞数失败：', error);
+      });
+
+      likeButton.addEventListener('click', async () => {
+        if (liked || isSubmitting) return;
+
+        isSubmitting = true;
+
+        try {
+          await runTransaction(db, async transaction => {
+            const snapshot = await transaction.get(likeRef);
+            const current = snapshot.exists() ? Number(snapshot.data().likes || 0) : 0;
+
+            transaction.set(likeRef, {
+              likes: current + 1,
+              updatedAt: new Date().toISOString()
+            }, { merge: true });
+          });
+
+          liked = true;
+          localStorage.setItem(LIKE_ACTIVE_KEY, 'true');
+          renderLikeState();
+        } catch (error) {
+          console.error('提交点赞失败：', error);
+        } finally {
+          isSubmitting = false;
+        }
+      });
+    } catch (error) {
+      console.error('Firebase 初始化失败：', error);
+    }
+  })();
 }
