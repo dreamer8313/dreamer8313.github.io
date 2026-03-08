@@ -1096,6 +1096,38 @@ a {
   box-shadow: var(--shadow-soft);
 }
 
+.visitor-panel {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(24, 32, 53, 0.92) 0%, rgba(18, 24, 40, 0.88) 100%);
+  border: 1px solid rgba(125, 226, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+}
+
+.visitor-map-link {
+  display: inline-flex;
+  padding: 10px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.visitor-map-link:hover {
+  transform: translateY(-3px);
+  border-color: rgba(125, 226, 255, 0.22);
+  box-shadow: 0 12px 30px rgba(6, 12, 28, 0.22);
+}
+
+.visitor-map {
+  display: block;
+  width: min(100%, 320px);
+  height: auto;
+  border-radius: 12px;
+}
+
 .site-footer {
   padding: 30px 8vw 50px;
   color: var(--muted);
