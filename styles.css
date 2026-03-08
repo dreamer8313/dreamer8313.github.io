@@ -146,6 +146,11 @@ a {
   gap: 14px;
   justify-content: center;
   align-self: start;
+  margin-top: 18px;
+}
+
+.hero-text {
+  margin-top: -6px;
 }
 
 .profile-photo {
@@ -193,7 +198,7 @@ a {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent);
-  margin: 4px 0 -4px;
+  margin: 14px 0 -4px;
 }
 
 .edu-inline {
@@ -901,10 +906,10 @@ a {
   letter-spacing: 0.03em;
 }
 
-.venue-iclr   { background: rgba(91,139,255,0.2);  color: #a8c2ff; border: 1px solid rgba(91,139,255,0.4); }
-.venue-icml   { background: rgba(255,184,76,0.15); color: #ffc95c; border: 1px solid rgba(255,184,76,0.35); }
-.venue-aaai   { background: rgba(255,100,100,0.15); color: #ff9e9e; border: 1px solid rgba(255,100,100,0.35); }
-.venue-neurips{ background: rgba(154,125,255,0.2); color: #c5aeff; border: 1px solid rgba(154,125,255,0.4); }
+.venue-iclr   { background: rgba(255, 100, 100, 0.18); color: #ffb2b2; border: 1px solid rgba(255, 120, 120, 0.42); }
+.venue-icml   { background: rgba(255, 196, 92, 0.2); color: #ffd36f; border: 1px solid rgba(255, 196, 92, 0.42); }
+.venue-aaai   { background: rgba(91, 139, 255, 0.18); color: #aecaFF; border: 1px solid rgba(91, 139, 255, 0.38); }
+.venue-neurips{ background: rgba(170, 132, 255, 0.2); color: #d2b8ff; border: 1px solid rgba(170, 132, 255, 0.42); }
 .venue-ijcai  { background: rgba(6,214,160,0.15);  color: #5eeecb; border: 1px solid rgba(6,214,160,0.3); }
 .venue-journal{ background: rgba(125,226,255,0.1); color: #7de2ff; border: 1px solid rgba(125,226,255,0.25); }
 .venue-conf   { background: rgba(180,180,180,0.1); color: #b0bccf; border: 1px solid rgba(180,180,180,0.2); }
@@ -1312,6 +1317,11 @@ a {
 
   .hero-profile {
     align-items: center;
+    margin-top: 0;
+  }
+
+  .hero-text {
+    margin-top: 0;
   }
 
   .profile-photo {
