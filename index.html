@@ -17,6 +17,7 @@
       </div>
       <nav class="nav">
         <a href="#home">首页</a>
+        <!-- <a href="#news">动态</a> -->
         <a href="#overview">教研</a>
         <a href="#publications">成果</a>
         <a href="#team">成员</a>
@@ -63,6 +64,34 @@
         <div class="cta hero-cta">
           <a class="button" href="#publications">查看成果</a>
           <a class="button ghost" href="#team">了解团队</a>
+        </div>
+      </section>
+
+      <section id="news" class="section content">
+        <div class="section-header">
+          <h2>最新动态 <span class="title-sub">/ News</span></h2>
+          <p>论文录用 · 学术服务 · 团队进展</p>
+        </div>
+        <div class="news-panel">
+          <p class="news-intro">记录近期论文录用、学术服务与团队进展，持续更新。</p>
+          <ul class="news-list">
+            <li class="news-item">
+              <b class="achievement">26/01/2026</b>
+              <span class="news-body">论文 <span class="news-highlight">L2D-Diff</span>（面向无条件时间序列生成）已被 <span class="news-highlight">ICLR 2026</span> 接收。</span>
+            </li>
+            <li class="news-item">
+              <b class="achievement">08/11/2025</b>
+              <span class="news-body">两篇工作被 <span class="news-highlight">AAAI 2026</span> 接收：Liang 的 <span class="news-highlight">GBOC</span> 与 Xuyang 的 <span class="news-highlight">TSGDiff</span>。祝贺！</span>
+            </li>
+            <li class="news-item">
+              <b class="achievement">29/07/2025</b>
+              <span class="news-body">受聘为中国人工智能学会 <span class="news-highlight">粒计算与知识发现专业委员会</span> 委员。</span>
+            </li>
+            <li class="news-item">
+              <b class="achievement">29/04/2025</b>
+              <span class="news-body">Yifan 的工作 <span class="news-highlight">Granular-ball-induced Multiple Kernel K-means</span> 已被 <span class="news-highlight">IJCAI 2025</span> 接收。</span>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -413,16 +442,17 @@
           </article>
         </div>
 
-        <p class="gallery-caption">📷 科研路上，有你们真好</p>
-        <div class="carousel gallery-carousel" aria-label="团队相册" style="margin-top:14px">
+        <p class="gallery-caption">时光剪影｜同行于科研路上，亦共同成长。</p>
+        <div class="carousel gallery-carousel" aria-label="团队相册" data-caption-target="team-gallery-detail" style="margin-top:14px">
           <div class="carousel-track">
-            <!-- <div class="slide" style="--img:url('https://images.unsplash.com/photo-1581252584837-95f73fd23574?w=1200&q=80&auto=format&fit=crop')"></div> -->
-            <div class="slide" style="--img:url('images/001.jpg')"></div>
+            <!-- <div class="slide" data-caption="📷 暮色温柔，笑意与晚风一起留在了这一刻。" style="--img:url('https://images.unsplash.com/photo-1581252584837-95f73fd23574?w=1200&q=80&auto=format&fit=crop')"></div> -->
+            <div class="slide" data-caption="📷 余晖映照下，青春与热爱都闪闪发光。" style="--img:url('images/001.jpg')"></div>
           </div>
           <button class="carousel-btn prev" aria-label="上一张">‹</button>
           <button class="carousel-btn next" aria-label="下一张">›</button>
           <div class="carousel-dots" aria-hidden="true"></div>
         </div>
+        <p id="team-gallery-detail" class="gallery-detail">📷 暮色温柔，笑意与晚风一起留在了这一刻。</p>
       </section>
 
       <section id="recruit" class="section content">

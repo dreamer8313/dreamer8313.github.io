@@ -4,6 +4,8 @@ function initCarousel(container) {
   const prevBtn = container.querySelector('.carousel-btn.prev');
   const nextBtn = container.querySelector('.carousel-btn.next');
   const dotsContainer = container.querySelector('.carousel-dots');
+  const captionTargetId = container.dataset.captionTarget;
+  const captionEl = captionTargetId ? document.getElementById(captionTargetId) : null;
 
   if (!track || slides.length === 0) return;
 
@@ -14,6 +16,15 @@ function initCarousel(container) {
     currentIndex = (index + slides.length) % slides.length;
     track.style.transform = `translateX(-${currentIndex * 100}%)`;
     updateDots();
+    updateCaption();
+  }
+
+  function updateCaption() {
+    if (!captionEl) return;
+    const activeSlide = slides[currentIndex];
+    const caption = activeSlide?.dataset.caption?.trim();
+    captionEl.textContent = caption || '';
+    captionEl.classList.toggle('is-empty', !caption);
   }
 
   function createDots() {
