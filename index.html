@@ -4,12 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>个人主页 | Home</title>
+    <link rel="preload" as="image" href="images/lifeng.jpg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="brand">
-        <img class="avatar" src="images/taiyi.jpg" alt="" aria-hidden="true">
+        <img class="avatar" src="images/taiyi.jpg" alt="" aria-hidden="true" width="56" height="56" decoding="async" fetchpriority="high">
         <div>
           <h1>沈礼锋</h1>
           <p>重庆邮电大学 · 人工智能学院</p>
@@ -29,7 +30,7 @@
       <section id="home" class="section hero">
         <div class="hero-profile">
           <div class="profile-photo">
-            <img src="images/lifeng.jpg" alt="沈礼锋" />
+            <img src="images/lifeng.jpg" alt="沈礼锋" width="200" height="264" decoding="async" fetchpriority="high" />
           </div>
           <!-- <div class="profile-like-wrap">
             <button id="like-button" class="like-button like-button-compact" type="button" aria-pressed="false">
@@ -47,15 +48,15 @@
         <p class="section-sublabel">📚 教育背景</p>
         <div class="edu-inline">
           <div class="edu-item">
-            <img class="edu-logo" src="images/hkust.png" alt="HKUST">
+            <img class="edu-logo" src="images/hkust.png" alt="HKUST" width="48" height="48" decoding="async">
             <div class="edu-text"><strong><span class="degree-badge degree-phd">博士</span></strong>香港科技大学（QS 世界第 44 位）<br>导师：Prof. James T. Kwok &amp; Prof. Pan Hui</div>
           </div>
           <div class="edu-item">
-            <img class="edu-logo" src="images/scut.png" alt="华南理工大学">
+            <img class="edu-logo" src="images/scut.png" alt="华南理工大学" width="48" height="48" decoding="async">
             <div class="edu-text"><strong><span class="degree-badge degree-ms">硕士</span></strong>华南理工大学 · 计算机科学与工程学院<br>导师：马千里教授 · 毕业获广东省优秀学生</div>
           </div>
           <div class="edu-item">
-            <img class="edu-logo" src="images/jnu.png" alt="暨南大学">
+            <img class="edu-logo" src="images/jnu.png" alt="暨南大学" width="48" height="48" decoding="async">
             <div class="edu-text"><strong><span class="degree-badge degree-bs">学士</span></strong>暨南大学 · 数学系 · 信息科学技术学院<br>毕业获优秀毕业生</div>
           </div>
         </div>
@@ -149,7 +150,7 @@
           <h3 class="pub-category">🌊 时序生成扩散模型</h3>
 
           <article class="pub-item">
-            <img class="pub-thumb" src="images/papers/ICLR26 L2D-Diff.png" alt="L2D-Diff thumbnail" />
+            <img class="pub-thumb" src="images/papers/ICLR26 L2D-Diff.png" alt="L2D-Diff thumbnail" loading="lazy" decoding="async" width="180" height="110" />
             <div class="pub-body">
               <div class="pub-meta"><span class="venue-badge venue-iclr">ICLR 2026</span><span class="rank-tag">A类会议</span></div>
               <h3 class="pub-title">Latent-to-data cascaded diffusion models for unconditional time series generation</h3>
@@ -159,7 +160,7 @@
           </article>
 
           <article class="pub-item">
-            <img class="pub-thumb" src="images/papers/AAAI26 TSGDiff.png" alt="TSGDiff thumbnail" />
+            <img class="pub-thumb" src="images/papers/AAAI26 TSGDiff.png" alt="TSGDiff thumbnail" loading="lazy" decoding="async" width="180" height="110" />
             <div class="pub-body">
               <div class="pub-meta"><span class="venue-badge venue-aaai">AAAI 2026</span><span class="rank-tag">A类会议</span></div>
               <h3 class="pub-title">TSGDiff: Rethinking synthetic time series generation from a pure graph perspective</h3>
@@ -169,7 +170,7 @@
           </article>
 
           <article class="pub-item">
-            <img class="pub-thumb" src="images/papers/ICLR24_mrDiff.png" alt="mrDiff thumbnail" />
+            <img class="pub-thumb" src="images/papers/ICLR24_mrDiff.png" alt="mrDiff thumbnail" loading="lazy" decoding="async" width="180" height="110" />
             <div class="pub-body">
               <div class="pub-meta"><span class="venue-badge venue-iclr">ICLR 2024</span><span class="rank-tag">A类会议</span></div>
               <h3 class="pub-title">Multi-resolution diffusion models for time series forecasting</h3>
@@ -179,7 +180,7 @@
           </article>
 
           <article class="pub-item">
-            <img class="pub-thumb" src="images/papers/ICML23_TIMEDIFF.png" alt="TimeDiff thumbnail" />
+            <img class="pub-thumb" src="images/papers/ICML23_TIMEDIFF.png" alt="TimeDiff thumbnail" loading="lazy" decoding="async" width="180" height="110" />
             <div class="pub-body">
               <div class="pub-meta"><span class="venue-badge venue-icml">ICML 2023</span><span class="rank-tag">A类会议</span><span class="cite-tag">🔖 195 引用</span></div>
               <h3 class="pub-title">Non-autoregressive conditional diffusion models for time series prediction</h3>
@@ -191,7 +192,7 @@
           <h3 class="pub-category">🔍 时间序列异常检测</h3>
 
           <article class="pub-item">
-            <img class="pub-thumb" src="images/papers/AAAI26 GBOC.png" alt="GBOC thumbnail" />
+            <img class="pub-thumb" src="images/papers/AAAI26 GBOC.png" alt="GBOC thumbnail" loading="lazy" decoding="async" width="180" height="110" />
             <div class="pub-body">
               <div class="pub-meta"><span class="venue-badge venue-aaai">AAAI 2026</span><span class="rank-tag">A类会议</span></div>
               <h3 class="pub-title">Finding time series anomalies using granular-ball vector data description</h3>
@@ -201,7 +202,7 @@
           </article>
 
           <article class="pub-item">
-            <img class="pub-thumb" src="images/papers/NC22_MS2D_Net.png" alt="MS2D-Net thumbnail" />
+            <img class="pub-thumb" src="images/papers/NC22_MS2D_Net.png" alt="MS2D-Net thumbnail" loading="lazy" decoding="async" width="180" height="110" />
             <div class="pub-body">
               <div class="pub-meta"><span class="venue-badge venue-journal">Neurocomputing 2022</span><span class="rank-tag">SCI 1区</span></div>
               <h3 class="pub-title">Efficient time series anomaly detection by multiresolution self-supervised discriminative network</h3>
@@ -212,7 +213,7 @@
           </article>
 
           <article class="pub-item">
-            <img class="pub-thumb" src="images/papers/AAAI21_RAMED.png" alt="RAMED thumbnail" />
+            <img class="pub-thumb" src="images/papers/AAAI21_RAMED.png" alt="RAMED thumbnail" loading="lazy" decoding="async" width="180" height="110" />
             <div class="pub-body">
               <div class="pub-meta"><span class="venue-badge venue-aaai">AAAI 2021</span><span class="rank-tag">A类会议</span></div>
               <h3 class="pub-title">Time series anomaly detection with multiresolution ensemble decoding</h3>
@@ -222,7 +223,7 @@
           </article>
 
           <article class="pub-item">
-            <img class="pub-thumb" src="images/papers/NIPS20_THOC.png" alt="THOC thumbnail" />
+            <img class="pub-thumb" src="images/papers/NIPS20_THOC.png" alt="THOC thumbnail" loading="lazy" decoding="async" width="180" height="110" />
             <div class="pub-body">
               <div class="pub-meta"><span class="venue-badge venue-neurips">NeurIPS 2020</span><span class="rank-tag">A类会议</span><span class="cite-tag">🔖 535 引用</span></div>
               <h3 class="pub-title">Timeseries anomaly detection using temporal hierarchical one-class network</h3>
@@ -234,7 +235,7 @@
           <h3 class="pub-category">🧠 深度储备池计算</h3>
 
           <article class="pub-item">
-            <img class="pub-thumb" src="images/papers/INS20_DEEPRESN.png" alt="DeePr-ESN thumbnail" />
+            <img class="pub-thumb" src="images/papers/INS20_DEEPRESN.png" alt="DeePr-ESN thumbnail" loading="lazy" decoding="async" width="180" height="110" />
             <div class="pub-body">
               <div class="pub-meta"><span class="venue-badge venue-journal">Information Sciences 2020</span><span class="rank-tag">SCI 1区</span><span class="cite-tag">🔖 167 引用</span></div>
               <h3 class="pub-title">DeePr-ESN: A deep projection-encoding echo-state network</h3>
@@ -244,7 +245,7 @@
           </article>
 
           <article class="pub-item">
-            <img class="pub-thumb" src="images/papers/NN19_EMN.png" alt="EMN thumbnail" />
+            <img class="pub-thumb" src="images/papers/NN19_EMN.png" alt="EMN thumbnail" loading="lazy" decoding="async" width="180" height="110" />
             <div class="pub-body">
               <div class="pub-meta"><span class="venue-badge venue-journal">Neural Networks 2019</span><span class="rank-tag">SCI 1区</span></div>
               <h3 class="pub-title">Time series classification with echo memory networks</h3>
@@ -254,7 +255,7 @@
           </article>
 
           <article class="pub-item">
-            <img class="pub-thumb" src="images/papers/TCYB19_LIME-LSTM.png" alt="LIME-LSTM thumbnail" />
+            <img class="pub-thumb" src="images/papers/TCYB19_LIME-LSTM.png" alt="LIME-LSTM thumbnail" loading="lazy" decoding="async" width="180" height="110" />
             <div class="pub-body">
               <div class="pub-meta"><span class="venue-badge venue-journal">IEEE TCYB 2019</span><span class="rank-tag">SCI 1区</span></div>
               <h3 class="pub-title">End-to-end incomplete time-series modeling from linear memory of latent variables</h3>
@@ -264,7 +265,7 @@
           </article>
 
           <article class="pub-item">
-            <img class="pub-thumb" src="images/papers/IJCAI17ConvESN.png" alt="IJCAI17 thumbnail" />
+            <img class="pub-thumb" src="images/papers/IJCAI17ConvESN.png" alt="IJCAI17 thumbnail" loading="lazy" decoding="async" width="180" height="110" />
             <div class="pub-body">
               <div class="pub-meta"><span class="venue-badge venue-ijcai">IJCAI 2017</span><span class="rank-tag">A类会议</span></div>
               <h3 class="pub-title">WALKING WALKing walking: Action recognition from action echoes</h3>
@@ -274,7 +275,7 @@
           </article>
 
           <article class="pub-item">
-            <img class="pub-thumb" src="images/papers/INS16_FESN.png" alt="FESN thumbnail" />
+            <img class="pub-thumb" src="images/papers/INS16_FESN.png" alt="FESN thumbnail" loading="lazy" decoding="async" width="180" height="110" />
             <div class="pub-body">
               <div class="pub-meta"><span class="venue-badge venue-journal">Information Sciences 2016</span><span class="rank-tag">SCI 1区</span></div>
               <h3 class="pub-title">Functional echo state network for time series classification</h3>
@@ -529,7 +530,7 @@
         </div>
         <div class="visitor-panel">
           <a href="https://clustrmaps.com/site/1bzja" title="Visit tracker" target="_blank" rel="noopener" class="visitor-map-link">
-            <img class="visitor-map" src="https://clustrmaps.com/map_v2.png?cl=ffffff&w=300&t=tt&d=NVTNKxXuqSA-6Uwn1cj-96W3cbIcG4K81G9FCuIbtE8" alt="访问者地图" />
+            <img class="visitor-map" src="https://clustrmaps.com/map_v2.png?cl=ffffff&w=300&t=tt&d=NVTNKxXuqSA-6Uwn1cj-96W3cbIcG4K81G9FCuIbtE8" alt="访问者地图" loading="lazy" decoding="async" width="300" height="189" />
           </a>
         </div>
       </section>
