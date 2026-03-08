@@ -290,17 +290,6 @@ a {
   margin-bottom: 28px;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 20px 8vw auto auto;
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(122, 226, 255, 0.2), transparent 65%);
-  pointer-events: none;
-}
-
 .hero-text h2 {
   font-size: clamp(1.8rem, 2.8vw, 2.6rem);
   margin: 0 0 12px;
@@ -461,6 +450,10 @@ a {
 .gallery-caption {
   margin: 52px 0 0;
   padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
   font-size: 0.95rem;
   color: rgba(230, 236, 255, 0.82);
   font-style: normal;
@@ -470,6 +463,24 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 14px;
   transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.gallery-caption-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(125, 226, 255, 0.12);
+  border: 1px solid rgba(125, 226, 255, 0.24);
+  color: var(--accent-2);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.gallery-caption-text {
+  color: rgba(230, 236, 255, 0.82);
+  font-weight: 500;
 }
 
 .gallery-detail {
