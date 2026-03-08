@@ -467,6 +467,8 @@ a {
 }
 
 .gallery-carousel .slide {
+  aspect-ratio: 5 / 2.6;
+  min-height: 360px;
   background-size: cover;
   background-color: #0a0e1a;
 }
