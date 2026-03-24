@@ -1,8 +1,8 @@
 :root {
   color-scheme: light;
-  --bg: #0b0f19;
-  --surface: #141a2a;
-  --card: #1a2236;
+  --bg: #121827;
+  --surface: #1b2437;
+  --card: #222c42;
   --text: #e6ecff;
   --muted: #9fb0d1;
   --accent: #5b8bff;
@@ -22,7 +22,7 @@
 body {
   margin: 0;
   font-family: "Inter", "Segoe UI", "PingFang SC", sans-serif;
-  background: radial-gradient(circle at top, #1a2340, var(--bg));
+  background: radial-gradient(circle at top, #243153, var(--bg));
   color: var(--text);
   line-height: 1.6;
   scroll-behavior: smooth;
