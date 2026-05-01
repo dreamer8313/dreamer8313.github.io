@@ -103,6 +103,13 @@ document.querySelectorAll('.pub-thumb:not(.pub-thumb-empty)').forEach(img => {
   img.addEventListener('click', () => openLightbox(img.src, img.alt));
 });
 
+document.querySelectorAll('.pub-image-link').forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    openLightbox(link.dataset.lightbox || link.getAttribute('href'), link.dataset.alt || link.textContent.trim());
+  });
+});
+
 lightboxClose.addEventListener('click', closeLightbox);
 lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
