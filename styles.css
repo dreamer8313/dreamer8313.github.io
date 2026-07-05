@@ -1051,7 +1051,7 @@ a {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0px;
   flex: 1;
 }
 
@@ -1065,7 +1065,7 @@ a {
   padding: 10px 12px;
   border-radius: 12px;
   background: rgba(247, 250, 255, 0.92);
-  border: 1px solid rgba(96, 112, 143, 0.1);
+/*  border: 1px solid rgba(96, 112, 143, 0.1);*/
 }
 
 .recruit-list li::before {
