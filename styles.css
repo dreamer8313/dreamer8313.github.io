@@ -834,7 +834,7 @@ a {
 }
 
 .achievement::before {
-  content: "🔥";
+  content: "";
   margin-right: 6px;
   font-size: 0.82rem;
   line-height: 1;
@@ -1237,12 +1237,13 @@ a {
 .venue-badge {
   display: inline-block;
   padding: 2px 10px;
-  border-radius: 999px;
-  font-size: 0.78rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.03em;
 }
 
+.venue-comment   { background: rgba(255, 100, 100, 0.12); color: #a93d4b; border: 1px solid rgba(255, 120, 120, 0.22); }
 .venue-iclr   { background: rgba(255, 100, 100, 0.12); color: #a93d4b; border: 1px solid rgba(255, 120, 120, 0.22); }
 .venue-icml   { background: rgba(255, 196, 92, 0.16); color: #9e6a0f; border: 1px solid rgba(255, 196, 92, 0.24); }
 .venue-aaai   { background: rgba(91, 139, 255, 0.14); color: #3154b8; border: 1px solid rgba(91, 139, 255, 0.24); }
@@ -1278,7 +1279,7 @@ a {
 
 .pub-authors {
   margin: 0 0 8px;
-  font-size: 0.95rem;
+  font-size: 1.0rem;
   color: var(--text);
 /*  font-family: "Comic Sans MS", "Comic Sans", cursive;*/
 }
