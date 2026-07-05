@@ -152,7 +152,7 @@ a {
 .section-header p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 1.0rem;
 }
 
 .hero {
@@ -412,7 +412,7 @@ a {
 }
 
 .edu-meta {
-  font-size: 0.82rem;
+  font-size: 1.0rem;
   line-height: 1.7;
   color: var(--muted);
 }
@@ -531,7 +531,7 @@ a {
   border-left: 3px solid #4f7cff;
   background: rgba(255, 255, 255, 0.96);
   border-radius: 0 10px 10px 0;
-  font-size: 0.88rem;
+  font-size: 1.0rem;
   color: var(--muted);
   line-height: 1.7;
   box-shadow: 0 8px 22px rgba(73, 96, 138, 0.08);
@@ -637,7 +637,8 @@ a {
 }
 
 .slide {
-  min-width: 100%;
+  margin: 0 auto;   /* 水平居中块元素 */
+  min-width: 70%;
   background-image: var(--img);
   background-size: contain;
   background-position: center;
@@ -672,7 +673,7 @@ a {
   background: rgba(125, 226, 255, 0.12);
   border: 1px solid rgba(125, 226, 255, 0.24);
   color: var(--accent-2);
-  font-size: 0.8rem;
+  font-size: 1.0rem;
   font-weight: 700;
   letter-spacing: 0.08em;
 }
@@ -829,7 +830,7 @@ a {
   border: 1px solid rgba(91, 139, 255, 0.24);
   color: #3154b8;
   font-weight: 800;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   letter-spacing: 0.03em;
 }
 
@@ -842,7 +843,7 @@ a {
 
 .news-body {
   min-width: 0;
-  font-size: 0.95rem;
+  font-size: 1.0rem;
   color: var(--text);
 }
 
@@ -940,7 +941,7 @@ a {
 
 .project-body h4 {
   margin: 0 0 6px;
-  font-size: 0.96rem;
+  font-size: 1.0rem;
   line-height: 1.5;
   color: var(--text);
 }
@@ -948,7 +949,7 @@ a {
 .project-body p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.84rem;
+  font-size: 1.0rem;
 }
 
 @media (max-width: 720px) {
@@ -1056,7 +1057,7 @@ a {
 }
 
 .recruit-list li {
-  font-size: 0.87rem;
+  font-size: 0.9rem;
   color: var(--muted);
   line-height: 1.6;
   display: flex;
